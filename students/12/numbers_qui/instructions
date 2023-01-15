@@ -1,0 +1,17 @@
+HOW TO PLAY:
+The game (2048) is played by pushbuttons with the goal of reaching the target number assigned in the beginning (default 2048)
+Slide the boxes left, right, up, and down to achieve the goal.
+Use the reset button to restart the game at any point you like.
+
+STRUCTURE:
+I do apologize for the clusterfuck of code I wrote. I didn't have the time for polishing.
+
+The UI is coded to be separate from the rest of the code meaning the tiles that form the UI are stored separately from the structure that handles the game mechanics.
+The UI is created after the game mechanics are processed by simply looking at the value in every slot of the board and changing the UI tile accordingly.
+Pushbuttons are disabled when the player has won or lost.
+The UI tiles, goal and seed spin boxes, and the reset button are created entirely in code, but the rest of the widgets are created with the help of qt designer.
+the frame (horizontal and vertical lines) for the game is not dynamic when changing the number of squares.
+
+Extra features:
+- Different numbers have different colors
+- Program only allows the power of two as a goal. (max 2^20 = 1048576)
